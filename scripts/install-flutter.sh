@@ -6,8 +6,8 @@ echo "=== Installing Flutter SDK for Vercel Build ==="
 # Fix git safe.directory issue on Vercel
 git config --global --add safe.directory '*'
 
-# Flutter version to install
-FLUTTER_VERSION="3.27.0"
+# Flutter version to install (needs Dart 3.7.0+ for this project)
+FLUTTER_VERSION="3.29.0"
 
 # Install Flutter in a temporary location
 export FLUTTER_HOME="$HOME/flutter"
