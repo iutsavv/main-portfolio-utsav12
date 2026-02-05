@@ -90,7 +90,7 @@ class _ContactSectionState extends State<ContactSection> {
           await _openEmailClient();
         }
       }
-    } on Exception catch (e) {
+    } on Exception catch (_) {
       if (mounted) {
         await _openEmailClient();
       }
@@ -135,7 +135,7 @@ class _ContactSectionState extends State<ContactSection> {
       } else {
         throw Exception('Could not launch email client');
       }
-    } on Exception catch (e) {
+    } on Exception catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
