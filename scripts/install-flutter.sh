@@ -35,7 +35,6 @@ flutter build web --release \
   --dart-define=EMAILJS_SERVICE_ID="${EMAILJS_SERVICE_ID:-}" \
   --dart-define=EMAILJS_TEMPLATE_ID="${EMAILJS_TEMPLATE_ID:-}" \
   --dart-define=EMAILJS_PUBLIC_KEY="${EMAILJS_PUBLIC_KEY:-}" \
-  --web-renderer html \
   --base-href "/"
 
 echo "=== Flutter build completed successfully ==="
