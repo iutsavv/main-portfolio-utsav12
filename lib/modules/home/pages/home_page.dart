@@ -5,6 +5,7 @@ import 'package:polymorphism/core/theme/app_theme.dart';
 import 'package:polymorphism/modules/contact/contact_section.dart';
 import 'package:polymorphism/modules/home/about_section.dart';
 import 'package:polymorphism/modules/home/cursor_reveal_hero_section.dart';
+import 'package:polymorphism/modules/certifications/certifications_section.dart';
 import 'package:polymorphism/modules/standout/standout_section.dart';
 import 'package:polymorphism/modules/timeline/timeline_section.dart';
 import 'package:polymorphism/modules/works/works_section.dart';
@@ -52,15 +53,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final ScrollController _scrollController = ScrollController();
-  final List<GlobalKey> _sectionKeys = List.generate(6, (index) => GlobalKey()); // Updated to 6 sections
+  final List<GlobalKey> _sectionKeys = List.generate(7, (index) => GlobalKey());
   final List<String> _sectionTitles = [
     'Hero',
     'About',
     'Timeline',
     'Works',
+    'Certifications',
     'Stand Out',
     'Contact',
-  ]; // Added Stand Out section
+  ];
   Timer? _scrollNavigationTimer;
 
   @override
@@ -186,13 +188,14 @@ class _HomePageState extends State<HomePage> {
                 height: MediaQuery.of(context).size.height,
                 child: CursorRevealHeroSection(
                   onExplorePressed: () => _scrollToSection(3),
-                ), // Updated to scroll to Works section
+                ), // Scrolls to Works section
               ),
               Container(key: _sectionKeys[1], child: const AboutSection()),
               Container(key: _sectionKeys[2], child: TimelineSection(scrollController: _scrollController)),
               Container(key: _sectionKeys[3], child: WorksSection(scrollController: _scrollController)),
-              Container(key: _sectionKeys[4], child: StandOutSection(scrollController: _scrollController)),
-              Container(key: _sectionKeys[5], child: const ContactSection()),
+              Container(key: _sectionKeys[4], child: CertificationsSection(scrollController: _scrollController)),
+              Container(key: _sectionKeys[5], child: StandOutSection(scrollController: _scrollController)),
+              Container(key: _sectionKeys[6], child: const ContactSection()),
               const Footer(),
             ],
           ),
