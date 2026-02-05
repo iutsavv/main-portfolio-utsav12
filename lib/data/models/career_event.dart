@@ -20,21 +20,30 @@ class CareerEvent {
   static List<CareerEvent> get sampleEvents => [
     const CareerEvent(
       year: 2022,
-      title: 'Head of Codeing Club',
+      title: 'Head of Coding Club',
       description:
           'Led the Coding Club at NIT Manipur and began MERN stack development through a web app internship.',
       icon: Icons.code,
-      company: 'Qubit Codeing Club.',
+      company: 'Qubit Coding Club',
       location: 'NIT Manipur, Imphal',
     ),
     const CareerEvent(
       year: 2024,
-      title: 'Marn Stack Developer',
+      title: 'MERN Stack Developer',
       description:
           "Actively involved in the maintenance and development of Collega's Application Java Project Olibs Backend 724.",
       icon: Icons.code,
-      company: 'NovaNactar',
+      company: 'NovaNectar',
       location: 'Remote',
+    ),
+    const CareerEvent(
+      year: 2025,
+      title: 'Training and Placement Coordinator',
+      description:
+          'Serving as the Training and Placement Coordinator at NIT Manipur, facilitating campus recruitment and student career development.',
+      icon: Icons.work,
+      company: 'NIT Manipur',
+      location: 'NIT Manipur, Imphal',
     ),
   ];
 
