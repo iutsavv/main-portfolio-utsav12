@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": null,
+  "buildCommand": "chmod +x ./scripts/install-flutter.sh && ./scripts/install-flutter.sh",
   "outputDirectory": "build/web",
-  "installCommand": "chmod +x ./scripts/install-flutter.sh && ./scripts/install-flutter.sh",
+  "installCommand": "echo 'Skipping default install'",
   "framework": null,
   "rewrites": [
     {
