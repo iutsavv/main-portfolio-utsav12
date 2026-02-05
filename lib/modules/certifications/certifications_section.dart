@@ -42,19 +42,19 @@ class _CertificationsSectionState extends State<CertificationsSection>
     Certificate(
       title: 'Certified Ethical Hacker',
       organization: 'EC-Council',
-      date: '2024',
+      date: '2022',
       imagePath: 'assets/certi/CEH.jpg',
     ),
     Certificate(
-      title: 'Microsoft Certified Professional',
-      organization: 'Microsoft',
-      date: '2023',
+      title: 'Model Contex Protocol',
+      organization: 'Anthropic',
+      date: '2024',
       imagePath: 'assets/certi/MCP.jpg',
     ),
     Certificate(
       title: 'Meta Hacker Cup',
       organization: 'Meta',
-      date: '2023',
+      date: '2024',
       imagePath: 'assets/certi/Meta_Hacker_cup.jpg',
     ),
     Certificate(
@@ -64,9 +64,9 @@ class _CertificationsSectionState extends State<CertificationsSection>
       imagePath: 'assets/certi/OCI_cloud.jpg',
     ),
     Certificate(
-      title: 'Professional Certificate',
-      organization: 'Industry Certification',
-      date: '2024',
+      title: 'Hackathon Winner',
+      organization: 'NIT Mizoram',
+      date: '2023',
       imagePath: 'assets/certi/Screenshot (14).png',
     ),
   ];
@@ -231,7 +231,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
           Text(
             'Credentials that validate expertise and commitment to excellence.',
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: AppColors.textPrimary.withOpacity(0.7),
+                  color: AppColors.textPrimary.withValues(alpha: 0.7),
                   fontSize: isMobile ? 14 : 16,
                 ),
           ),
@@ -271,20 +271,20 @@ class _CertificationsSectionState extends State<CertificationsSection>
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      AppColors.glassSurface.withOpacity(0.2),
-                      AppColors.glassSurface.withOpacity(0.05),
+                      AppColors.glassSurface.withValues(alpha: 0.2),
+                      AppColors.glassSurface.withValues(alpha: 0.05),
                     ],
                   ),
                   border: Border.all(
                     color: isActive
-                        ? AppColors.accent.withOpacity(0.5)
-                        : AppColors.textPrimary.withOpacity(0.1),
+                        ? AppColors.accent.withValues(alpha: 0.5)
+                        : AppColors.textPrimary.withValues(alpha: 0.1),
                     width: isActive ? 2 : 1,
                   ),
                   boxShadow: isActive
                       ? [
                           BoxShadow(
-                            color: AppColors.accent.withOpacity(0.2),
+                            color: AppColors.accent.withValues(alpha: 0.2),
                             blurRadius: 30,
                             spreadRadius: 5,
                           ),
@@ -305,7 +305,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
                               certificate.imagePath,
                               fit: BoxFit.contain,
                               errorBuilder: (context, error, stackTrace) => Container(
-                                color: AppColors.glassSurface.withOpacity(0.1),
+                                color: AppColors.glassSurface.withValues(alpha: 0.1),
                                 child: const Icon(
                                   Icons.image_not_supported,
                                   color: AppColors.textPrimary,
@@ -334,7 +334,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
                               end: Alignment.bottomCenter,
                               colors: [
                                 Colors.transparent,
-                                AppColors.bgDark.withOpacity(0.9),
+                                AppColors.bgDark.withValues(alpha: 0.9),
                               ],
                             ),
                           ),
@@ -374,7 +374,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
                                     vertical: 2,
                                   ),
                                   decoration: BoxDecoration(
-                                    color: AppColors.accent.withOpacity(0.2),
+                                    color: AppColors.accent.withValues(alpha: 0.2),
                                     borderRadius: BorderRadius.circular(4),
                                   ),
                                   child: Text(
@@ -415,11 +415,11 @@ class _CertificationsSectionState extends State<CertificationsSection>
             height: isActive ? 12 : 8,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: isActive ? AppColors.accent : AppColors.textPrimary.withOpacity(0.3),
+              color: isActive ? AppColors.accent : AppColors.textPrimary.withValues(alpha: 0.3),
               boxShadow: isActive
                   ? [
                       BoxShadow(
-                        color: AppColors.accent.withOpacity(0.5),
+                        color: AppColors.accent.withValues(alpha: 0.5),
                         blurRadius: 8,
                         spreadRadius: 2,
                       ),
@@ -454,7 +454,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
                 gradient: LinearGradient(
                   colors: [
                     AppColors.accent,
-                    AppColors.textPrimary.withOpacity(0.3),
+                    AppColors.textPrimary.withValues(alpha: 0.3),
                   ],
                 ),
               ),
@@ -463,7 +463,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
           Text(
             '${certificates.length}'.padLeft(2, '0'),
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  color: AppColors.textPrimary.withOpacity(0.5),
+                  color: AppColors.textPrimary.withValues(alpha: 0.5),
                   fontWeight: FontWeight.bold,
                   fontSize: isMobile ? 24 : 32,
                 ),
@@ -483,7 +483,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
             Icons.keyboard_arrow_up_rounded,
             color: _currentPage > 0
                 ? AppColors.textPrimary
-                : AppColors.textPrimary.withOpacity(0.3),
+                : AppColors.textPrimary.withValues(alpha: 0.3),
             size: 32,
           ),
         ),
@@ -496,7 +496,7 @@ class _CertificationsSectionState extends State<CertificationsSection>
             Icons.keyboard_arrow_down_rounded,
             color: _currentPage < certificates.length - 1
                 ? AppColors.textPrimary
-                : AppColors.textPrimary.withOpacity(0.3),
+                : AppColors.textPrimary.withValues(alpha: 0.3),
             size: 32,
           ),
         ),
